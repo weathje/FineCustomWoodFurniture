@@ -1,0 +1,263 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #D1BBA1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header styles for both index and gallery */
+header {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    header table {
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    header td {
+        padding: 10px;
+        vertical-align: middle;
+    }
+
+    header a:link, header a:visited {
+        color: rgb(191,129,56);
+        text-decoration: none;
+    }
+
+    header a:active, header a:hover {
+        color: rgb(209,187,161);
+        text-decoration: underline;
+    }
+
+    header h1 {
+        font-size: 2em;
+        margin: 0;
+        color: #D1BBA1;
+    }
+
+/* General styles for links */
+a:link, a:visited {
+    color: rgb(191,129,56);
+    text-decoration: none;
+}
+
+a:active, a:hover {
+    color: rgb(209,187,161);
+    text-decoration: underline;
+}
+
+/* Gallery specific styles */
+.gallery-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+    .gallery-item img {
+        max-width: 100%;
+        height: auto;
+        border: none;
+        margin-left: auto; /* This centers the image within the div */
+        margin-right: auto; /* This centers the image within the div */
+    }
+
+    .gallery-item p {
+        font-size: 14px;
+        color: #D1BBA1;
+    }
+
+/* Responsive adjustments for the gallery */
+@media screen and (min-width: 600px) {
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .gallery-item {
+        width: calc(33.333% - 20px);
+    }
+}
+
+/* Footer styles */
+footer table {
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto 0;
+}
+
+.footer {
+    font-size: 1rem;
+    text-align: center;
+    color: #D1BBA1;
+}
+
+/* Main content styles for index page */
+main table {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.content {
+    font-size: smaller;
+}
+
+/* Responsive for index page */
+@media (max-width: 870px) {
+    header table, main table, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    table img {
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+/* Ensure images never overflow their containers */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Optional: Add some padding or margin to separate image from other content */
+.item-image {
+    padding: 20px 0;
+}
+
+.item-detail {
+    width: 100%; /* Takes full width of the container */
+    max-width: none; /* Allows image to display at full size if it exceeds container */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item-image img {
+    display: block;
+    width: auto; /* This will allow the image to display at its natural width */
+    height: auto;
+    max-width: 100%; /* If the image is larger than the viewport, it will scale down */
+    margin: 0 auto; /* Centers the image */
+}
+
+/* Text alignment for descriptions and features */
+.item-description, .item-features, .item-contact {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.item-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.table-top, .table-foot {
+    max-width: 48%; /* Adjust as needed */
+}
+
+/* Testimonials page specific styles */
+.testimonials-page {
+    text-align: center;
+}
+
+.testimonials {
+    margin: 20px 0;
+}
+
+    .testimonials blockquote {
+        background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent dark overlay */
+        border-left: 5px solid #9F8138; /* Gold border to the left */
+        padding: 10px 20px;
+        margin: 10px 0;
+        font-style: italic;
+    }
+
+        .testimonials blockquote p {
+            padding: 20px 40px;
+            margin: 0 0 10px;
+        }
+
+        .testimonials blockquote footer {
+            text-align: right;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+/* New styles for 'About the Artist' page */
+.hspace-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.vspace-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Adds padding to paragraphs that follow images for better readability */
+img + p {
+    padding: 0 10px;
+}
+
+/* If you need to use tables for layout in the 'About' page, ensure they are responsive */
+.about-page table {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.about-page td {
+    padding: 5px;
+    vertical-align: top;
+}
+
+/* Responsive for 'About' page */
+@media (max-width: 870px) {
+    .about-page table, .about-page tr, .about-page td {
+        display: block;
+        width: 100%;
+    }
+
+    .about-page td {
+        text-align: center;
+    }
+
+    .about-page img {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+}
